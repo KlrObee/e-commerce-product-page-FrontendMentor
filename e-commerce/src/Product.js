@@ -22,6 +22,7 @@ function Product() {
   return (
     <div>
       {/* Image carousel */}
+      <div>
       <img src={product.images[selectedImageIndex]} alt={product.name} />
       <div>
         {product.thumbnails.map((thumbnail, index) => (
@@ -32,9 +33,11 @@ function Product() {
             onClick={() => setSelectedImageIndex(index)}
           />
         ))}
+        </div>
       </div>
 
       {/* Product details */}
+      <div>
       <h1>Sneaker Company</h1>
       <h2>{product.name}</h2>
       <p>{product.description}</p>
@@ -47,6 +50,7 @@ function Product() {
         <button onClick={() => setQuantity(quantity + 1)}>+</button>
       </div>
       <button onClick={handleAddToCart}>Add to cart</button>
+      </div>
     </div>
   );
 }

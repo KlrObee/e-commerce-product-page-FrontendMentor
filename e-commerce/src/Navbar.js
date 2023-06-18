@@ -1,15 +1,26 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function Navbar() {
   return (
     <nav>
       <img src="/logo.svg" alt="Logo" />
       <ul>
-        <li>Collections</li>
-        <li>Men</li>
-        <li>Women</li>
-        <li>About</li>
-        <li>Contact</li>
+        <li>
+          <Link to="/Collections">Collections</Link>
+        </li>
+        <li>
+          <Link to="/Men">Men</Link>
+        </li>
+        <li>
+          <Link to="/Women">Women</Link>
+        </li>
+        <li>
+          <Link to="/About">About</Link>
+        </li>
+        <li>
+          <Link to="/Contact">Contact</Link>
+        </li>
       </ul>
       <div>
         <img src="/icon-cart.svg" alt="Cart" />

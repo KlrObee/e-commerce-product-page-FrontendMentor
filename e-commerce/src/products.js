@@ -1,10 +1,10 @@
 const products = [
     {
       id: 1,
-      name: "Sneakers",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      price: 100,
-      discount: 20,
+      name: "Fall Limited Edition Sneakers",
+      description: "These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they'll withstand everything the weather can offer.",
+      price: 250,
+      discount: 50,
       images: [
         "/image-product-1.jpg",
         "/image-product-2.jpg",

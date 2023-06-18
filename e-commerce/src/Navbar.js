@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { a } from "react-router-dom";
 
 function Navbar() {
   return (
@@ -7,19 +7,19 @@ function Navbar() {
       <img src="/logo.svg" alt="Logo" />
       <ul>
         <li>
-          <Link to="/Collections">Collections</Link>
+          <a href="">Collections</a>
         </li>
         <li>
-          <Link to="/Men">Men</Link>
+          <a href="">Men</a>
         </li>
         <li>
-          <Link to="/Women">Women</Link>
+          <a href="">Women</a>
         </li>
         <li>
-          <Link to="/About">About</Link>
+          <a href="">About</a>
         </li>
         <li>
-          <Link to="/Contact">Contact</Link>
+          <a href="">Contact</a>
         </li>
       </ul>
       <div>

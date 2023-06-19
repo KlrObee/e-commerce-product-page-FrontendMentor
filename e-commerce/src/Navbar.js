@@ -1,44 +1,36 @@
 import React from "react";
 
-function Navbar() {
+function Navbar({ cartItems, openCart }) {
+  const totalQuantity = cartItems.reduce((total, item) => total + item.quantity, 0);
+
   return (
     <nav>
       <img src="/logo.svg" alt="Logo" />
       <ul>
         <li>
-          <button href="">Collections</button>
+          <button>Collections</button>
         </li>
         <li>
-          <button href="">Men</button>
+          <button>Men</button>
         </li>
         <li>
-          <button href="">Women</button>
+          <button>Women</button>
         </li>
         <li>
-          <button href="">About</button>
+          <button>About</button>
         </li>
         <li>
-          <button href="">Contact</button>
+          <button>Contact</button>
+        </li>
+        <li>
+          <button onClick={openCart}>
+            <img src="/icon-cart.svg" alt="Cart" />
+            {totalQuantity > 0 && (
+              <span className="cart-item-count">{totalQuantity}</span>
+            )}
+          </button>
         </li>
       </ul>
-      <div>
-        <img src="/icon-cart.svg" alt="Cart" />
-        <div>
-          {/* Cart dropdown */}
-          {/*cartItems.length === 0 ? (
-            <p>Your cart is empty</p>
-          ) : (
-            <ul>
-              {cartItems.map((item) => (
-                <li key={item.id}>
-                  {item.name} x {item.quantity}
-                </li>
-              ))}
-            </ul>
-          )*/}
-        </div>
-      </div>
-      <img src="/image-avatar.png" alt="Profile" />
     </nav>
   );
 }

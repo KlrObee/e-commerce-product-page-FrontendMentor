@@ -10,6 +10,7 @@ function Product() {
     const product = products[0]; // Replace with the selected product
     const item = {
       id: product.id,
+      company: product.company,
       name: product.name,
       price: product.price,
       quantity,
@@ -38,7 +39,7 @@ function Product() {
 
       {/* Product details */}
       <div>
-      <h1>Sneaker Company</h1>
+      <h1>{product.company} </h1>
       <h2>{product.name}</h2>
       <p>{product.description}</p>
       <p>${product.price - product.discount}</p>

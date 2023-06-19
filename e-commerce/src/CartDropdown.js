@@ -3,7 +3,6 @@ import React from "react";
 function CartDropdown({
   cartItems,
   isCartOpen,
-  closeCart,
   removeCartItem,
   clearCart,
 }) {
@@ -11,7 +10,6 @@ function CartDropdown({
     <div className={`CartDropdown ${isCartOpen ? "open" : ""}`}>
       <div className="CartDropdown-header">
         <h2>Cart</h2>
-        <button onClick={closeCart}>Close</button>
       </div>
       <div className="CartDropdown-body">
         {cartItems.length === 0 ? (

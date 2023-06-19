@@ -27,6 +27,7 @@ function Navbar({ cartItems, openCart }) {
             <img src="/icon-cart.svg" alt="Cart" />
             {totalQuantity > 0 && (
               <span className="cart-item-count">{totalQuantity}</span>
+              
             )}
           </button>
         </li>

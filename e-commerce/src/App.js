@@ -1,11 +1,9 @@
 import React, { useState } from "react";
 import Navbar from "./Navbar";
 import Product from "./Product";
-import CartDropdown from "./CartDropdown";
 
 function App() {
   const [cartItems, setCartItems] = useState([]);
-  const [isCartOpen, setIsCartOpen] = useState(false);
 
   const addToCart = (item) => {
     const existingItemIndex = cartItems.findIndex((cartItem) => cartItem.id === item.id);
@@ -18,38 +16,12 @@ function App() {
     }
   };
 
-  const removeCartItem = (item) => {
-    setCartItems(cartItems.filter((cartItem) => cartItem.id !== item.id));
-  };
-
-  const clearCart = () => {
-    setCartItems([]);
-  };
-
-  const openCart = () => {
-    setIsCartOpen(true);
-  };
-
-  const closeCart = () => {
-    setIsCartOpen(false);
-  };
-
   return (
-    <div>
-      <Navbar
-        cartItems={cartItems}
-        openCart={openCart}
-      />
-      <Product
-        addToCart={addToCart}
-      />
-      <CartDropdown
-        cartItems={cartItems}
-        isCartOpen={isCartOpen}
-        closeCart={closeCart}
-        removeCartItem={removeCartItem}
-        clearCart={clearCart}
-      />
+    <div className="App">
+      <Navbar cartItems={cartItems} setCartItems={setCartItems} />
+      <main>
+        <Product addToCart={addToCart} />
+      </main>
     </div>
   );
 }

@@ -1,7 +1,20 @@
-import React from "react";
+import React, {useState} from "react";
+import CartDropdown from "./CartDropdown";
 
-function Navbar({ cartItems, openCart }) {
-  const totalQuantity = cartItems.reduce((total, item) => total + item.quantity, 0);
+function Navbar({ cartItems, setCartItems }) {
+  const [isCartOpen, setIsCartOpen] = useState(false);
+
+  const removeCartItem = (item) => {
+    setCartItems(cartItems.filter((cartItem) => cartItem.id !== item.id));
+  };
+
+  const clearCart = () => {
+    setCartItems([]);
+  };
+
+  const handleCartClick = () => {
+    setIsCartOpen(!isCartOpen);
+  };
 
   return (
     <nav>
@@ -23,15 +36,23 @@ function Navbar({ cartItems, openCart }) {
           <button>Contact</button>
         </li>
         <li>
-          <button onClick={openCart}>
+          <button onClick={handleCartClick}>
             <img src="/icon-cart.svg" alt="Cart" />
-            {totalQuantity > 0 && (
-              <span className="cart-item-count">{totalQuantity}</span>
-              
+            {cartItems.length > 0 && (
+              <span className="cart-item-count">
+                {cartItems.reduce((total, item) => total + item.quantity, 0)}
+              </span>
             )}
           </button>
         </li>
       </ul>
+      {isCartOpen && (
+        <CartDropdown
+          cartItems={cartItems}
+          removeCartItem={removeCartItem}
+          clearCart={clearCart}
+        />
+      )}
     </nav>
   );
 }

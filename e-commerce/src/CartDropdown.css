@@ -1,0 +1,78 @@
+.CartDropdown {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    background: white;
+    border-radius: 0.5rem;
+    box-shadow: 0px 12px 21px 0px rgba(63, 63, 63, 0.2), 0px 24px 21px -26px rgba(63, 63, 63,0.3);
+    top: 10%;
+    min-width: 350px;
+    right: 6%; 
+  }
+
+.CartDropdown-body ul{
+    margin: 0;
+    padding: 0;
+}
+
+.CartDropdown-body{
+    padding: 1rem 1.5rem;
+}
+
+.Cart-item{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 0;
+    gap: 1rem;
+}
+
+.Cart-item img{
+    width: 50px;
+    height: 50px;
+    border-radius: 0.2rem;
+}
+
+.Cart-item h3{
+    font-size: 1rem;
+    font-weight: 400;
+    margin: 0;
+    margin-bottom: 0.2rem ;
+    color: hsl(219, 9%, 45%);
+}
+
+.Cart-item p{
+    font-size: 1rem;
+    margin: 0;
+    margin-top: 0.2rem ;
+    color: hsl(219, 9%, 45%);
+}
+
+.Cart-item span{
+    font-weight: 700;
+    color: hsl(220, 13%, 13%);
+}
+
+.CartDropdown-header{
+    border-bottom: 0.5px solid hsl(220, 14%, 75%);
+    font-size: 0.7rem;
+    padding: 0.5rem 1.5rem;
+}
+
+.CartDropdown-checkout{
+    background-color: hsl(26, 100%, 55%);
+    justify-self: stretch;
+    text-align: center;
+    padding: 1rem;
+    font-weight: 700;
+    color: white;
+    border-radius: 0.5rem;
+    margin: 0 1.5rem 2rem;
+}
+
+.empty-text{
+    text-align: center;
+    padding: 3rem 0rem;
+    font-weight: 700;
+    color: hsl(219, 9%, 45%);
+}

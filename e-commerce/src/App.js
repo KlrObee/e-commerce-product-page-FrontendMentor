@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Navbar from "./Navbar";
 import Product from "./Product";
+import "./App.css";
 
 function App() {
   const [cartItems, setCartItems] = useState([]);

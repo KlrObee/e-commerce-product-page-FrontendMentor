@@ -1,0 +1,148 @@
+.product-body {
+  display: flex;
+  justify-content: space-around;
+  gap: 2rem;
+}
+
+.product-carousel {
+  display: flex;
+  flex-direction: column;
+  max-width: 27rem;
+  gap: 2rem;
+}
+.product-thumbnails {
+    display: flex;
+    gap: 2rem;
+  }
+
+.product-image {
+  height: auto;
+  border-radius: 1rem;
+  max-width: 100%;
+}
+
+.thumbnail-image {
+    border: solid 2px transparent;
+    cursor: pointer;
+    box-sizing: border-box;
+    height: auto;
+    border-radius: 0.5rem;
+    width: calc((100% - 6rem) / 4);
+  }
+
+  .thumbnail-image.selected {
+    border-color: hsl(26, 100%, 55%);
+    
+  }
+
+.product-infos {
+  flex-basis: 28rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.product-company{
+    font-size: 0.9rem;
+    color: hsl(26, 100%, 55%);
+    padding: 0;
+}
+
+.product-name {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: hsl(220, 13%, 13%);
+  margin: 0.5rem 0 1rem;
+}
+
+.product-description {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  color: hsl(219, 9%, 45%);
+}
+
+.price-infos{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 0;
+}
+
+.product-final-price {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: hsl(220, 13%, 13%);
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.product-discount {
+  font-size: 1rem;
+  color: hsl(26, 100%, 55%);
+  font-weight: bold;
+  border-radius: 0.4rem;
+  padding: 0.2rem 0.4rem;
+  background-color: hsl(25, 100%, 94%);
+
+}
+
+.product-price{
+    text-decoration: line-through;
+    color: hsl(220, 14%, 75%);
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 2.5rem;
+}
+
+.CTAs{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.quantity-box{
+    display: flex;
+    background: hsl(223, 64%, 98%);
+    align-items: center;
+    padding: 1.2rem 0.5rem;
+    gap: 2.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 0.5rem;
+}
+
+.quantity-box button{
+    background: none;
+    border: none;
+    cursor: pointer;
+    fill: hsl(26, 100%, 55%);
+}
+
+.quantity-box button:hover{
+  fill: hsl(25, 100%, 69%);
+}
+
+.add-to-cart{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background: hsl(26, 100%, 55%);
+    color: white;
+    padding: 1.2rem 2rem;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    flex-grow: 2;
+    justify-content: center;
+}
+
+.add-to-cart:hover{
+    background: hsl(25, 100%, 63%);
+    box-shadow: 2px 27px 44px -13px hsla(26, 100%, 55%, 0.5);
+}
+
+.add-to-cart svg{
+    transform: scale(0.8);
+}
